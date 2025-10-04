@@ -59,7 +59,7 @@ int APIENTRY wWinMain(HINSTANCE hInst, HINSTANCE, LPWSTR, int nCmdShow) {
         DispatchMessage(&msg);
     }
 
-    (int)msg.wParam;
+    return (int)msg.wParam;
 }
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam) {
@@ -290,7 +290,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 }
 
 void DrawClock(HWND hWnd, HDC hdc, int FontHeight, HBRUSH hMask) {
-    static WCHAR* yoil[] = {
+    static const WCHAR* yoil[] = {
         L"일요일",
         L"월요일",
         L"화요일",
