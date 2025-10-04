@@ -4,4 +4,5 @@
 #define IDR_MENU1       1002
 #define IDM_SHOW        1003
 #define IDM_HIDE        1004
+#define IDM_BKDARK      1005
 #define IDM_EXIT        WM_USER + 1
