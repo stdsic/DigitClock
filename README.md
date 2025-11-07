@@ -26,6 +26,9 @@ Windows Legacy API를 이용한 디지털 시계 프로그램입니다.<br>
 ## 👤 Authors<br>
 - stdsic — @https://github.com/stdsic/DigitClock<br><br>
 ## 📚 Version History<br>
+- 1.1.1<br>
+- 오류 수정
+  - 시간 그리기 함수 분기문 수정 
 - 1.1.0<br>
 - 기능 업데이트
   - 창 위치 이동 지원(마우스 드래그)
