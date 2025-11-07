@@ -308,7 +308,7 @@ void DrawClock(HWND hWnd, HDC hdc, int FontHeight, HBRUSH hMask) {
     int hour, min, sec, x, y;
 
     hour = ((st.wHour > 12) ? (st.wHour - 12) : st.wHour);
-    if(hour == 12) { hour = 0; }
+    if(st.wHour > 12 && hour == 12) { hour = 0; }
     min = st.wMinute;
     sec = st.wSecond;
 
@@ -316,7 +316,7 @@ void DrawClock(HWND hWnd, HDC hdc, int FontHeight, HBRUSH hMask) {
             Time,
             L"%02d:%02d:%02d %s %lc\r\n%s, %02d월 %02d일",
             hour, min, sec,
-            ((st.wHour > 12) ? L"PM" : L"AM"),
+            ((st.wHour >= 12) ? L"PM" : L"AM"),
             0x25A0,
             yoil[st.wDayOfWeek],
             st.wMonth,
